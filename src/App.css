@@ -1,0 +1,26 @@
+input, button {
+    margin: .5rem;
+}
+button:disabled {
+    cursor: not-allowed;
+}
+
+.todoItemRow {
+    display: flex;
+    flex-grow: 1;
+    margin: .5rem;
+}
+
+.delete {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.done {
+    color: green;
+}
+
+.notdone {
+    color: red;
+}
