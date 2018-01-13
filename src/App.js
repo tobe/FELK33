@@ -85,7 +85,7 @@ class App extends Component {
                 }
                 </ul>
 
-                <button onClick = { this.checkAll }>Check all!</button>
+                <button onClick = { this.checkAll }>Check all</button>
                 <button onClick = { this.deleteDone }>Delete done</button>
             </div>
         );
