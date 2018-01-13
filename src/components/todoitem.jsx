@@ -11,7 +11,7 @@ class TodoItem extends Component {
         const todoClass = isChecked ? "done" : "notdone";
 
         return (
-            <div className="todoItemRow">
+            <li>
                 <span className={todoClass}>
                     {this.props.item.text}
                 </span>
@@ -20,9 +20,9 @@ class TodoItem extends Component {
                        onChange = {() => this.props.toggleTodo(this.props.item)} />
                 <span className="delete"
                       onClick = {() => this.props.deleteTodo(this.props.item)}>
-                      X
+                      &times;
                 </span>
-            </div>
+            </li>
         );
     }
 }

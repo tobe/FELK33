@@ -16,10 +16,10 @@ class App extends Component {
     componentWillMount() {
         this.setState({
             todos: [
-                new Todo('Blah 1', true),
-                new Todo('Blah 2', false),
-                new Todo('Blah 3', true),
-                new Todo('Blah 4', false)
+                new Todo('Learn Angular 2', false),
+                new Todo('Learn React', false),
+                new Todo('Learn ASP.NET Core', true),
+                new Todo('Learn Node.JS', true)
             ]
         });
     }
@@ -66,22 +66,24 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h2>Todo app</h2>
+                <h2>Todos</h2>
 
                 <Input addNewTodo = {this.addNewTodo} />
                 <Status todos = {this.state.todos} />
 
+                <ul>
                 {
                     this.state.todos.map((todoItem, key) => {
                         return (
-                            <TodoItem key  = {key}
-                                      item = {todoItem}
-                                      toggleTodo = {this.toggleTodo}
-                                      deleteTodo = {this.deleteTodo}
-                            />
+                                <TodoItem key  = {key}
+                                        item = {todoItem}
+                                        toggleTodo = {this.toggleTodo}
+                                        deleteTodo = {this.deleteTodo}
+                                />
                         )
                     })
                 }
+                </ul>
 
                 <button onClick = { this.checkAll }>Check all!</button>
                 <button onClick = { this.deleteDone }>Delete done</button>
